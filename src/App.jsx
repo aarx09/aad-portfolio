@@ -129,12 +129,12 @@ function Hero() {
           <span style={{
   display: 'block',
   color: 'transparent',
-  WebkitTextStroke: '2.4px rgba(255,255,255,0.55)',
-  textShadow: `
-    0 0 10px rgba(255,0,0,0.18),
-    0 0 22px rgba(255,0,0,0.12)
-  `,
-  opacity: 0.9
+
+WebkitTextStroke: '2.6px rgba(255,255,255,0.78)',
+
+textShadow: '0 0 12px rgba(255,0,0,0.16)',
+
+opacity: 1,
 }}>
   ADITYA
 </span>
