@@ -121,7 +121,7 @@ function Hero() {
     <section style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', textAlign: 'center', padding: '120px clamp(24px,6vw,120px) 80px' }}>
       <Particles />
       <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(192,57,43,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(192,57,43,0.08) 1px,transparent 1px)', backgroundSize: '80px 80px', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translate(-50%,-50%)', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle,rgba(255,40,40,0.26) 0%,transparent 72%)', pointerEvents: 'none', animation: 'cursorGlow 4s ease-in-out infinite' }} />
+      <div style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translate(-50%,-50%)', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle,rgba(255,40,40,0.03) 0%,transparent 72%)', pointerEvents: 'none', animation: 'cursorGlow 4s ease-in-out infinite' }} />
       <div style={{ position: 'relative', zIndex: 2 }}>
         <div style={{ fontFamily: "'Space Mono',monospace", fontSize: 11, letterSpacing: '0.5em', color: 'var(--red)', marginBottom: 32, textTransform: 'uppercase', animation: 'fadeIn 1s 0.3s both' }}>◆ PORTFOLIO  ◆</div>
         <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: 'clamp(52px,9vw,130px)', lineHeight: 0.92, letterSpacing: '0.02em', color: '#fff', animation: 'fadeUp 1s 0.5s both' }}>
