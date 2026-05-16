@@ -50,7 +50,9 @@ function Particles() {
         if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
         if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(192,57,43,${p.a * 0.5})`; ctx.fill();
+        ctx.fillStyle = `rgba(255,50,50,${p.a * 0.85})`;
+ctx.shadowBlur = 12;
+ctx.shadowColor = 'rgba(255,0,0,0.6)'; ctx.fill();
       });
       for (let i = 0; i < pts.length; i++) {
         for (let j = i + 1; j < pts.length; j++) {
@@ -58,7 +60,7 @@ function Particles() {
           const d = Math.sqrt(dx * dx + dy * dy);
           if (d < 120) {
             ctx.beginPath(); ctx.moveTo(pts[i].x, pts[i].y); ctx.lineTo(pts[j].x, pts[j].y);
-            ctx.strokeStyle = `rgba(192,57,43,${0.08 * (1 - d / 120)})`; ctx.stroke();
+            ctx.strokeStyle = `rgba(255,40,40,${0.22 * (1 - d / 120)})`; ctx.stroke();
           }
         }
       }
@@ -118,13 +120,24 @@ function Hero() {
   return (
     <section style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', textAlign: 'center', padding: '120px clamp(24px,6vw,120px) 80px' }}>
       <Particles />
-      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(192,57,43,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(192,57,43,0.04) 1px,transparent 1px)', backgroundSize: '80px 80px', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translate(-50%,-50%)', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle,rgba(192,57,43,0.15) 0%,transparent 70%)', pointerEvents: 'none', animation: 'cursorGlow 4s ease-in-out infinite' }} />
+      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(192,57,43,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(192,57,43,0.08) 1px,transparent 1px)', backgroundSize: '80px 80px', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translate(-50%,-50%)', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle,rgba(255,40,40,0.26) 0%,transparent 72%)', pointerEvents: 'none', animation: 'cursorGlow 4s ease-in-out infinite' }} />
       <div style={{ position: 'relative', zIndex: 2 }}>
         <div style={{ fontFamily: "'Space Mono',monospace", fontSize: 11, letterSpacing: '0.5em', color: 'var(--red)', marginBottom: 32, textTransform: 'uppercase', animation: 'fadeIn 1s 0.3s both' }}>◆ PORTFOLIO  ◆</div>
         <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: 'clamp(52px,9vw,130px)', lineHeight: 0.92, letterSpacing: '0.02em', color: '#fff', animation: 'fadeUp 1s 0.5s both' }}>
           <span style={{ display: 'block' }}>AARYAN</span>
-          <span style={{ display: 'block', color: 'transparent', WebkitTextStroke: '1px rgba(255,255,255,0.3)' }}>ADITYA</span>
+          <span style={{
+  display: 'block',
+  color: 'transparent',
+  WebkitTextStroke: '2.4px rgba(255,255,255,0.55)',
+  textShadow: `
+    0 0 10px rgba(255,0,0,0.18),
+    0 0 22px rgba(255,0,0,0.12)
+  `,
+  opacity: 0.9
+}}>
+  ADITYA
+</span>
           <span style={{ display: 'block' }}>DAS</span>
         </div>
         <div style={{ height: 50, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 24 }}>
